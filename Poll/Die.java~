@@ -1,0 +1,10 @@
+port java.util.Random;
+public class Die() {
+ private int dots;
+ 
+ public void roll() {
+   Random rand;
+   dots = rand.nextInt(6) + 1;
+   System.out.println(dots);
+ }
+}

@@ -1,0 +1,24 @@
+/**
+ * Creates a collection of information about
+ * pets of our class.
+ * Mrs. Westervelt
+ * 9/21/16
+ */
+public class OurPets
+{
+  /** Program to use the Pet class*/
+  public static void main(String [] args)
+  {
+    Pet mrsWestervelt = new Pet("dog", "terrier", "Maddie");
+    System.out.println(mrsWestervelt);
+    Pet connorPeters = new Pet("dog", "cockapoo", "Bodie");
+    System.out.println(connorPeters);
+    Pet ameliaFordyce = new Pet("hamster", "chinese dwarf", "Rosie");
+    System.out.println(ameliaFordyce);
+    Pet jimmyRizzuto = new Pet("rock", "igneous", "Senor Rock");
+    System.out.println(jimmyRizzuto);
+    Pet coleHanson = new Pet("dog", "golden retriever", "Holly");
+    System.out.println(coleHanson);
+  }
+  
+}

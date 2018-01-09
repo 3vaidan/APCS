@@ -1,0 +1,8 @@
+public class Blackjack {
+  public static void main (String[] args) {
+   Deck deck = new Deck();
+   String[] DEck = deck.getDeck();
+   System.out.println(Arrays.toString(DEck));
+  }
+  
+}

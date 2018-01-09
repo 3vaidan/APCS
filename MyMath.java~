@@ -1,0 +1,24 @@
+// This program prompts the user to enter miles traveled and
+// gas used and calculates the car's gas mileage
+import java.util.Scanner;
+public class MyMath
+{
+  public static double gasMileage(int m, double g)
+  {  
+    return ((int)m/g*100)/100;  //rounds to one decimal place
+  }
+  
+  public static void main(String[] args)
+  {
+    //input
+    Scanner keyboard = new Scanner(System.in);    
+    System.out.print("Miles traveled: ");
+    int miles = keyboard.nextInt();
+    System.out.print("Gallons of gas used: ");
+    double gallons = keyboard.nextDouble();
+    keyboard.close();
+    
+    //method calls and output
+    System.out.println("Your car's gas mileage was "+ gasMileage(miles, gallons));
+  }
+}

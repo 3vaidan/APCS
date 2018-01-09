@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" main="" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="Dice/diceManage.java" package="" timestamp="12-Sep-2017 10:01:16">
+        <select from="130" to="130"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Dice/Dice.java" package="" timestamp="12-Sep-2017 10:01:40">
+        <select from="130" to="130"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

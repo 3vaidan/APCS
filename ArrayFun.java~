@@ -1,0 +1,33 @@
+public class ArrayFun {
+  public static void main(String[] args) {
+    int[] arr = {1,7,12,15,18,20,21,22};
+    int[] insert = {8,13};
+    int[] remove = {18};
+    printArr(arr);
+    arr = arrInsert(arr,insert);
+    printArr(arr);
+  //  arr = arrRemove(arr,remove);
+   // printArr(arr);
+  }
+  
+  public int[] arrInsert(arr,insert) {
+    int counter = 0;
+   int[] newArr = new int[arr.length + insert.length];
+    for(int i = 0; i < newArr.length; i++) {
+      if(arr[i] != null) {
+       newArr[i] = arr[i]; 
+      } else {
+        newArr[i] = insert[counter];
+        counter++;
+      }
+    }
+  }
+  
+  public void printArr(arr) {
+    for(num : arr)
+      System.out.print(num + " ");
+    System.out.println("");
+  }
+                                  
+  
+}

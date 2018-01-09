@@ -1,0 +1,131 @@
+import java.util.*;
+public class Interation {
+  
+  public static void sumLimit(Scanner scan) {
+    
+    int sum = 0;
+    int num = 0;
+    do {
+      System.out.println("Next Num?");
+      num = scan.nextInt();
+      if(num > 0) sum += num;
+    } while(num > 0);
+      System.out.println(sum);
+  }
+  
+  public static void multipleTo200 (Scanner scan) {
+    int current = 0;
+    
+    System.out.println("What is the multiple");
+    int num = scan.nextInt();
+    while(current < 200) {
+     current += num;
+     System.out.println(current);
+    }
+  }
+  
+  public static void fizzBuzz (Scanner scan) {
+    System.out.println("What is the ending number?");
+   
+    int current = 0;
+    int end = scan.nextInt();
+    while(current < end) {
+     current++;
+     if(current % 3 == 0 && current % 5 == 0) {
+      System.out.println("FizzBuzz"); 
+     } else if(current %3 == 0 ) {
+      System.out.println("Fizz"); 
+     } else if(current % 5 == 0 ) {
+      System.out.println("Buzz"); 
+     } else {
+      System.out.println(current); 
+     }
+    }
+  }
+  
+  public static void printCheckerboard(int n) {
+    int current = 0;
+    for(int i = 0; i < n; i++) {
+      for(int k = 0; k <= n; k++) {
+        if(current == 0) {
+         System.out.print("o"); 
+         current = 1;
+        } else {
+          System.out.print("#"); 
+         current = 0;
+      }
+        
+    }
+      System.out.println("");
+  }
+  }
+  
+  public static boolean perfectNum(int num) {
+    int current = 0;
+    int n = num;
+    while(n>1) {
+      if(n % 2 == 0) {
+       n = n / 2;
+       current += n;
+      } else {
+        n = (n+1) / 2;
+       current += n;
+      }
+    }
+    
+    if(current == num)
+      return true;
+    return false;
+  }
+  
+  public static void firstPerfectNums() {
+   int count = 0;
+   int current = 0;
+   boolean perfect;
+   while(count != 4) {
+     perfect = perfectNum(current);
+     if(perfect) {
+      System.out.println(current);
+      count++;
+      current++;
+     } else {
+      current++; 
+     }
+   }
+  }
+  
+  public static boolean isPrime(int N)
+  {
+    for (int i = 2;i<=Math.sqrt(N);i++)
+    {
+      if (N%i == 0)
+        return false;
+    }
+    return true;
+  }
+  
+  public static void firstPrime() {
+    int count = 0;
+    int current = 0;
+    while(count != 4) {
+      if (isPrime(current) && isPrime((int) (Math.pow(2, current)-1)))
+      {
+        count++;
+          System.out.println(current +"\t" + (int) (Math.pow(2, current)-1));
+      }
+      current++;
+    }
+  }
+
+  
+  public static void main (String[] args) {
+    Scanner scan = new Scanner(System.in);
+   //Interation.sumLimit(scan);
+    //Interation.multipleTo200(scan);
+    //fizzBuzz(scan);
+    //printCheckerboard(4);
+    //System.out.println(Interation.perfectNum(28));
+    Interation.firstPerfectNums();
+    //Interation.firstPrime();
+  }
+}

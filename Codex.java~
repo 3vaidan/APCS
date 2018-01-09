@@ -1,0 +1,14 @@
+public class Codex {
+  public static void changer(int[] foo) {
+    for(int pos=0; pos<4; pos++) {
+     foo[pos] = pos; 
+    }
+  }
+  public static void main(String[] args) {
+    int[] array = {4,3,2,1};
+    changer(array);
+    for(int num: array) {
+     System.out.print(num + " "); 
+    }
+  }
+}

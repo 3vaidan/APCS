@@ -1,0 +1,7 @@
+public class Test {
+ private String test = "sdjfsk;ldfjkl;sdfj;sklf Model#345345345";
+ public static void main(String[] args) {
+  String[] parts = test.splice("Model#");
+  System.out.println(parts[0);
+ }
+}

@@ -1,0 +1,105 @@
+/** House class
+  * @author Matthew Bergwall
+  * @date 09/20/2017
+  */
+public class House {
+  /**fields */
+ private int number; //ex 5
+ private String street; //ex Lantern Lane
+ private String color; // ex blue
+ private int bedrooms; //ex 3
+ private double bathrooms; //ex 1.5
+ 
+ /**constructors */
+ 
+ /**Definds with number and street */
+ public House(int n, String s) {
+  number = n;
+  street = s;
+  color = "";
+  bedrooms = 0;
+  bathrooms = 0;
+ }
+ 
+ /** Defines with everything */
+ public House(int n, String s, String c, int b, double ba) {
+   number = n;
+   street = s;
+   color = c;
+   bedrooms = b;
+   bathrooms = ba;
+ }
+ 
+ /** accessors */
+ 
+ /*
+  * get number 
+   * @returns number 
+   */
+ public int getNumber () {
+  return number; 
+ }
+ 
+  /**get street */
+ public String getStreet () {
+  return street; 
+ }
+ 
+  /**get color */
+ public String getColor () {
+  return color; 
+ }
+ 
+  /**get bedrooms */
+ public int getBedrooms () {
+  return bedrooms; 
+ }
+ 
+  /**get bathrooms */
+ public double getBathrooms () {
+  return bathrooms; 
+ }
+ 
+ /** mutators */
+ 
+ /** change number */
+ public void changeNumber(int n) {
+  number = n; 
+ }
+ 
+ /** change Street */
+ public void changeStreet(String s) {
+   street = s;
+ }
+ 
+ /** change color */
+ public void changeColor(String c) {
+  color = c;
+ }
+ 
+ /** change bedrooms */
+ public void changeBedrooms(int b) {
+  bedrooms = b;
+ }
+ 
+ /** change bathrooms */
+ public void changeBathrooms(double b) {
+  bathrooms = b;
+ }
+ 
+ //** Accessor to string */
+ 
+ public String toString() {
+  return "This house is a "+ color + " house located at " + number + " " + street + " with " +bedrooms + " bedrooms and " +bathrooms+ " baths."; 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+}

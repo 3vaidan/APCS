@@ -1,0 +1,8 @@
+public class DieTest {
+ Die die = new Die();
+ die.roll();
+ System.out.println(die.getNumDots());
+ die.roll();
+ System.out.println(die.getNumDots());
+}
+  

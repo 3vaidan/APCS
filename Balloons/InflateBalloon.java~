@@ -1,0 +1,8 @@
+import java.awt.Color;\
+  
+public class InflateBalloon extends Balloon{
+  
+  public void inflate (int percent) {
+    setRadius(getRadius() * (1+0.01*percent));
+  }
+}
