@@ -1,8 +1,0 @@
-import java.lang.*;
-class Playground {
-    public static void main(String[ ] args) {
-        int a = 65234;
-        String num = a + "";
-        System.out.println(num.substr(num.length() - 1,num.length() + 1));
-    }
-}
