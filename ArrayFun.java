@@ -1,3 +1,4 @@
+
 public class ArrayFun {
   public static void main(String[] args) {
     int[] arr = {1,7,12,15,18,20,21,22};
@@ -6,8 +7,8 @@ public class ArrayFun {
     printArr(arr);
     arr = arrInsert(arr,insert);
     printArr(arr);
-   // arr = arrRemove(arr,remove);
-   // printArr(arr);
+    arr = arrRemove(arr,remove);
+    printArr(arr);
   }
   
   public static int[] arrInsert(int[] arr,int[] insert) {
@@ -24,17 +25,25 @@ public class ArrayFun {
   }
   
   public static int[] arrRemove(int[] arr, int[] remove) {
-    int found = 0;
-   int[] newArr = new int[arr.length - remove.length];
-   for(int i = 0; i < newArr.length; i++) {
-     if(find(remove,arr[i]) == -1) {
-      newArr[i + found] = arr[i - found]; 
-     } else {
-     newArr[i] = arr[i + 1];
-     found ++;
-     }
-   }
-   return newArr;
+    for(int k : remove) {
+    boolean gotit = false;
+    for(int i = 0; i < arr.length; i++) {
+      if(gotit) {
+        if(i == arr.length-1) {
+         arr[arr.length-1] = 0;
+         break;
+       }
+       arr[i] = arr[i+1];
+       
+      } else {
+        if(arr[i] == k) {
+         i--;
+         gotit = true;
+        }
+      }
+    }
+    }
+    return arr;
   }
   
   public static int find(int[] array, int value) {
