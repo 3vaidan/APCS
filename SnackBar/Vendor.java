@@ -93,4 +93,10 @@ public class Vendor
    change=0;
    return c;
   }
+  
+  public static double getTotalSales() {
+    double c = totalSales;
+    totalSales = 0;
+   return c;
+  }
 }

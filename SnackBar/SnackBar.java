@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.Box;
 import javax.swing.JPasswordField;
-
+import javax.swing.JButton;
 
 
 
@@ -59,12 +59,20 @@ public class SnackBar extends JFrame
       wall.add(machine);
       wall.add(Box.createHorizontalStrut(5));
     }
-
+    JButton sales =  new JButton("Log sales");
+    sales.addActionListener(new ActionListener() { 
+      public void actionPerformed(ActionEvent e) { 
+        JOptionPane.showMessageDialog(null,
+        "There has been $" + Vendor.getTotalSales() + " total sales. Resetting.",
+        "Service", JOptionPane.INFORMATION_MESSAGE);
+      } 
+    } );
     JPanel service = new JPanel();
     service.add(new JLabel(" Service login: "));
     JPasswordField password = new JPasswordField("", 5);
     password.addActionListener(this);
     service.add(password);
+    service.add(sales);
 
     Container c = getContentPane();
     c.setBackground(Color.GRAY);

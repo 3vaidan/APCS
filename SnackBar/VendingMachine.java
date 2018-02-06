@@ -33,7 +33,6 @@ public class VendingMachine extends JPanel
     banner.setEditable(false);
     banner.setFont(new Font("Serif", Font.BOLD, 14));
     banner.setHorizontalAlignment(JTextField.CENTER);
-
     deposit25c = new JButton(" 25 ", coin);
     deposit25c.addActionListener(this);
     deposit10c = new JButton(" 10 ", coin);
@@ -98,15 +97,19 @@ public class VendingMachine extends JPanel
       if (trayFull)          // Successful sale
       {
         repaint();
+        Coins coin = new Coins(change);
+   String changes = coin.getQuarters() + " quarters " + coin.getDimes() + " dimes " + coin.getNickles() + " nickels " + coin.getPennies() + " pennies.";
         JOptionPane.showMessageDialog(null,
-          "Enjoy your " + brandName + "\n" + " Change " + change + "c",
+          "Enjoy your " + brandName + "\n" + " Change " + changes + "",
           "Enjoy " + brandName, JOptionPane.PLAIN_MESSAGE);
         trayFull = false;
       }
       else if (change > 0)   // Refund
       {
+        Coins coin = new Coins(change);
+   String changes = coin.getQuarters() + " quarters " + coin.getDimes() + " dimes " + coin.getNickles() + " nickels " + coin.getPennies() + " pennies.";
         JOptionPane.showMessageDialog(null,
-          "Take " + change + "c back",
+          "Take " + changes + " back",
           "Money back", JOptionPane.ERROR_MESSAGE);
       }
     }

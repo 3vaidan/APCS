@@ -2,6 +2,9 @@ public class Time {
  public int h;
  public int m;
  public Time(int hx, int mx) {
+   if(hx > 12) {
+    hx -= 12; 
+   }
   h = hx;
   m = mx;
  }
