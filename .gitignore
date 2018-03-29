@@ -1,2 +1,4 @@
 *.class
 *.java~
+/APCS MAC/nbproject/private/
+/APCS MAC/build/
