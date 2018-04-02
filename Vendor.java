@@ -76,7 +76,7 @@ public class Vendor
     stock--;
     totalSales+=((price)/100.0);
     change=deposit-price;
-    deposit=0;    
+    deposit=0;
     return true;
    }
    return false;
@@ -93,10 +93,14 @@ public class Vendor
    change=0;
    return c;
   }
-  
+
   public static double getTotalSales() {
     double c = totalSales;
     totalSales = 0;
    return c;
+  }
+
+  public String toString() {
+    return "PRICE = " + price + " STOCK = "+stock;
   }
 }
